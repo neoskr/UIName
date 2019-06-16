@@ -27,14 +27,16 @@ use pocketmine\Player;
 use pocketmine\Server;
 use pocketmine\event\entity\EntityDeathEvent;
 use pocketmine\event\player\PlayerRespawnEvent;
-use pocketmine\network\mcpe\protocol\ModalFormRequestPacket; // 커스텀 UI 관련
-use pocketmine\network\mcpe\protocol\ModalFormResponsePacket; // 커스텀 UI 관련
+use pocketmine\network\mcpe\protocol\ModalFormRequestPacket;
+use pocketmine\network\mcpe\protocol\ModalFormResponsePacket;
 use pocketmine\event\server\DataPacketReceiveEvent;
 
 class UIName extends PluginBase implements Listener {
 	
 	public function onEnable() {
+		
 		$this->getServer ()->getPluginManager ()->registerEvents ( $this, $this );
+		
 	}
 
 	public function dt0() {
